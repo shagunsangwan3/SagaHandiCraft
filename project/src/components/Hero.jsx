@@ -10,11 +10,11 @@ const slides = [
     sub: 'Handcrafted furniture made to be treasured.\nDesigned for beautiful living, built for generations.',
     cta: 'Explore Collection',
     ctaPath: '/collections',
-    productId: 'haveli-cane-daybed',
-    productName: 'Haveli Cane Daybed',
-    productMats: ['Sheesham Wood', 'Handwoven Cane'],
-    bg: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    product: '/WhatsApp_Image_2026-06-16_at_3.32.50_PM.jpeg',
+    productId: 'chesterfield-leather-sofa',
+    productName: 'Chesterfield Leather Sofa',
+    productMats: ['Full-Grain Buffalo Leather', 'Brass Nailhead Trim'],
+    bg: '/chesterfield-sofa-angle.jpg',
+    product: '/chesterfield-sofa-front.jpg',
   },
   {
     badge: 'IMMERSIVE 3D SHOWROOM',
@@ -26,8 +26,21 @@ const slides = [
     productId: 'cane-oak-dresser',
     productName: 'Cane & Oak Dresser',
     productMats: ['Oak Wood', 'Brass Hardware'],
-    bg: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    bg: '/WhatsApp_Image_2026-06-16_at_4.08.32_PM_(2).jpeg',
     product: '/WhatsApp_Image_2026-06-16_at_4.08.31_PM.jpeg',
+  },
+  {
+    badge: 'IMMERSIVE 3D SHOWROOM',
+    headline: 'Crafted in Jodhpur.',
+    headlineItalic: 'Loved worldwide.',
+    sub: 'From carved wood to hand-painted lacquer —\nevery piece tells a story of skilled hands.',
+    cta: 'View All Products',
+    ctaPath: '/collections',
+    productId: 'mandala-painted-console',
+    productName: 'Mandala Hand-Painted Console',
+    productMats: ['Hand-Painted Lacquer', 'Brass Hardware'],
+    bg: '/four-poster-bed.jpg',
+    product: '/mandala-console-table.jpg',
   },
 ]
 
@@ -40,10 +53,10 @@ const materials = [
 ]
 
 const thumbnails = [
-  { src: '/WhatsApp_Image_2026-06-16_at_3.32.50_PM.jpeg', id: 'haveli-cane-daybed', label: 'Front' },
-  { src: '/WhatsApp_Image_2026-06-16_at_3.32.49_PM.jpeg', id: 'haveli-cane-daybed', label: 'Detail' },
-  { src: '/WhatsApp_Image_2026-06-16_at_4.08.31_PM.jpeg', id: 'cane-oak-dresser', label: 'Front' },
-  { src: '/WhatsApp_Image_2026-06-16_at_4.08.32_PM_(1).jpeg', id: 'cane-oak-dresser', label: 'Angle' },
+  { src: '/chesterfield-sofa-front.jpg', id: 'chesterfield-leather-sofa', label: 'Sofa' },
+  { src: '/union-jack-dresser-front.jpg', id: 'union-jack-trunk-dresser', label: 'Dresser' },
+  { src: '/mandala-console-table.jpg', id: 'mandala-painted-console', label: 'Console' },
+  { src: '/lotus-mirror.jpg', id: 'lotus-mughal-arch-mirror', label: 'Mirror' },
 ]
 
 const avatars = [
