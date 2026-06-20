@@ -55,7 +55,7 @@ export default function B2BSection() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nCompany: ${form.company}\nEmail: ${form.email}\nMobile: ${form.mobile}\n\nProduct Type: ${productLine}\n\nDescription / Requirements:\n${form.description}${imgLine}`
     )
-    window.location.href = `mailto:HR@sagahandicrafts.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@sagahandicraft.com?subject=${subject}&body=${body}`
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)

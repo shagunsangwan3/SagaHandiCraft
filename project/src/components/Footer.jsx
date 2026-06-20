@@ -93,7 +93,7 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <Link to="/terms" className="text-[11px] text-bark-100/50 hover:text-cream-200 transition-colors">Terms of Use</Link>
             <Link to="/sustainability" className="text-[11px] text-bark-100/50 hover:text-cream-200 transition-colors">Sustainability</Link>
-            <a href="mailto:HR@sagahandicrafts.com" className="text-[11px] text-bark-100/50 hover:text-cream-200 transition-colors">Contact</a>
+            <a href="mailto:info@sagahandicraft.com" className="text-[11px] text-bark-100/50 hover:text-cream-200 transition-colors">Contact</a>
           </div>
         </div>
       </div>

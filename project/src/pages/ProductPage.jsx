@@ -36,7 +36,7 @@ export default function ProductPage() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nCompany: ${form.company}\nEmail: ${form.email}\nQty: ${form.qty}\n\nProduct: ${product.name}\nMaterial: ${product.materialOptions[activeMat]}\nFinish: ${product.finishOptions[activeFinish]}\n\nNotes:\n${form.notes}`
     )
-    window.location.href = `mailto:HR@sagahandicrafts.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@sagahandicraft.com?subject=${subject}&body=${body}`
     setInquireOpen(false)
   }
 

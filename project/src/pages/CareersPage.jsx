@@ -88,13 +88,13 @@ export default function CareersPage() {
               If you believe your skills align with our vision, we invite you to apply. Please share your resume and portfolio (if applicable) at:
             </p>
             <a
-              href="mailto:HR@sagahandicrafts.com"
+              href="mailto:info@sagahandicraft.com"
               className="flex items-center gap-3 bg-cream-100/10 border border-cream-100/20 rounded-xl px-5 py-4 hover:bg-cream-100/20 transition-colors"
             >
               <Mail size={18} className="text-gold-300 flex-shrink-0" />
               <div>
                 <p className="text-[10px] text-cream-300 mb-0.5">Send your application to</p>
-                <p className="text-sm font-semibold text-cream-100">HR@sagahandicrafts.com</p>
+                <p className="text-sm font-semibold text-cream-100">info@sagahandicraft.com</p>
               </div>
             </a>
             <p className="text-xs text-cream-300/70 mt-4">
@@ -122,7 +122,7 @@ export default function CareersPage() {
               ))}
             </div>
             <a
-              href="mailto:HR@sagahandicrafts.com?subject=Career Application - SAGA Handicrafts"
+              href="mailto:info@sagahandicraft.com?subject=Career Application - SAGA Handicrafts"
               className="btn-gold mt-6 inline-flex items-center gap-2 text-white text-sm font-medium px-5 py-3 rounded-sm"
             >
               <Mail size={14} /> Apply Now

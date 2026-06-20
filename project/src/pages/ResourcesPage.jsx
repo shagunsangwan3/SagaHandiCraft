@@ -116,7 +116,7 @@ export default function ResourcesPage() {
             <h3 className="font-serif font-bold text-xl text-cream-100 mb-1">Can't find what you're looking for?</h3>
             <p className="text-cream-300 text-sm">Our team is happy to help with any enquiry.</p>
           </div>
-          <a href="mailto:HR@sagahandicrafts.com" className="btn-gold text-white text-sm font-medium px-7 py-3 rounded-xl whitespace-nowrap flex items-center gap-2">
+          <a href="mailto:info@sagahandicraft.com" className="btn-gold text-white text-sm font-medium px-7 py-3 rounded-xl whitespace-nowrap flex items-center gap-2">
             Contact Us <ArrowRight size={14} />
           </a>
         </div>
