@@ -480,6 +480,72 @@ export const products = [
   },
 ]
 
+  {
+    id: 'chesterfield-club-chair',
+    name: 'Chesterfield Club Chair',
+    category: 'Living',
+    collection: 'Timeless Classics',
+    materials: ['Full-Grain Buffalo Leather', 'Solid Hardwood Frame', 'Brass Nailhead Trim'],
+    finish: 'Oxblood Deep Burgundy',
+    description: 'The Chesterfield Club Chair is the ultimate companion to the Chesterfield sofa — and a showpiece in its own right. Upholstered in full-grain buffalo leather with deep button tufting across the back and arms, it delivers the same old-world grandeur in a single-seat form. The rich oxblood burgundy patina deepens with age, the brass stud trim lines every edge, and the turned bun feet on antique brass castors complete a silhouette that belongs equally in a private library, gentleman\'s study, or luxury hotel lounge.',
+    features: [
+      'Full-grain buffalo leather upholstery',
+      'Deep hand-button tufting on back & arms',
+      'Solid hardwood frame — mortise & tenon joinery',
+      'Brass nailhead stud trim on all edges',
+      'Turned bun feet with antique brass castors',
+      'Seat cushion with separate leather cover',
+    ],
+    careNotes: 'Condition the leather every 3–6 months with a quality leather conditioner. Wipe spills immediately with a dry cloth. Avoid direct sunlight to preserve the natural patina. Polish brass castors occasionally with a soft cloth.',
+    images: [
+      '/club-chair-front.jpg',
+      '/club-chair-angle-left.jpg',
+      '/club-chair-back.jpg',
+      '/club-chair-side.jpg',
+      '/club-chair-rear-angle.jpg',
+      '/club-chair-angle-right.jpg',
+      '/club-chair-detail.jpg',
+      '/club-chair-front-alt.jpg',
+    ],
+    imageLabels: ['Front View', 'Left Angle', 'Back View', 'Side View', 'Rear Angle', 'Right Angle', 'Detail — Tufting & Studs', 'Full Front'],
+    materialOptions: ['Buffalo Leather', 'Genuine Cowhide Leather', 'Velvet Upholstery'],
+    finishOptions: ['Oxblood Burgundy', 'Vintage Cognac', 'Antique Dark Brown', 'Forest Green', 'Midnight Navy'],
+    leadTime: '5–7 weeks',
+    moq: 1,
+  },
+  {
+    id: 'oriental-carved-nesting-tables',
+    name: 'Oriental Carved Nesting Tables — Set of 4',
+    category: 'Living',
+    collection: 'Timeless Classics',
+    materials: ['Solid Rosewood / Sheesham', 'Hand-Carved Fretwork', 'High-Gloss Lacquer'],
+    finish: 'Deep Lacquered Rosewood',
+    description: 'A breathtaking set of four graduating nesting tables crafted in solid rosewood with meticulous hand-carved fretwork aprons and moulded top edges. Each table features a delicate cloud-and-scroll carved border — a motif drawn from traditional Asian decorative arts — and sits on refined straight legs with spade feet. Lacquered to a deep, lustrous burgundy finish that reveals the wood\'s natural figure. Perfect for luxury residences, boutique hotels, and any interior that appreciates the intersection of Eastern tradition and exceptional craftsmanship.',
+    features: [
+      'Set of 4 graduating nesting tables — largest to smallest',
+      'Solid rosewood / sheesham construction throughout',
+      'Hand-carved cloud & scroll fretwork aprons',
+      'Moulded top edge with inset panel detail',
+      'Traditional straight legs with spade feet',
+      'High-gloss hand-applied lacquer finish',
+    ],
+    careNotes: 'Dust with a soft dry cloth. Wipe the lacquered surface with a barely damp cloth if needed. Avoid harsh chemicals that may cloud the lacquer finish. Apply a small amount of furniture wax annually to maintain the deep lustre.',
+    images: [
+      '/oriental-tables-front.jpg',
+      '/oriental-tables-side.jpg',
+      '/oriental-tables-top.jpg',
+      '/oriental-tables-angle.jpg',
+      '/oriental-tables-detail1.jpg',
+      '/oriental-tables-detail2.jpg',
+    ],
+    imageLabels: ['Front View — Nested', 'Side View', 'Top View — Spread', 'Angle View', 'Detail — Carved Fretwork', 'Detail — Apron Carving'],
+    materialOptions: ['Solid Rosewood', 'Solid Sheesham (Indian Rosewood)', 'Solid Teak'],
+    finishOptions: ['Deep Lacquered Rosewood', 'Natural Rosewood Oil', 'Ebony Lacquer', 'Walnut Lacquer'],
+    leadTime: '6–8 weeks',
+    moq: 1,
+  },
+]
+
 export const getProductById = (id) => products.find((p) => p.id === id)
 
 export const getProductsByCategory = (category) =>

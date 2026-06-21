@@ -49,9 +49,9 @@ export default function WorkshopToWorld() {
       {/* Artisan image header */}
       <div className="relative h-52 overflow-hidden">
         <img
-          src="https://images.pexels.com/photos/8768609/pexels-photo-8768609.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Artisan crafting furniture"
-          className="w-full h-full object-cover"
+          src="/workshop-artisan.jpg"
+          alt="Saga Handicrafts artisan leather craftsmanship"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-cream-50/80 via-cream-50/40 to-transparent" />
         <div className="absolute inset-0 p-8 flex items-end">

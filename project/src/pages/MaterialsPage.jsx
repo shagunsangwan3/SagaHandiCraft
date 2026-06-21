@@ -28,7 +28,7 @@ const materials = [
     name: 'Mango Wood',
     origin: 'Rajasthan & South India',
     color: '#A0522D',
-    img: 'https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: 'https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=600',
     properties: ['Eco-friendly choice', 'Light & workable', 'Warm honey tones', 'Unique figuring'],
     description: 'Mango wood is a sustainable choice sourced from mango trees that have completed their fruit-bearing cycle. It offers beautiful honey-to-amber tones with interesting figuring. Lighter than teak but still durable and characterful.',
     uses: 'Beds, wardrobes, decorative pieces, accent furniture',
