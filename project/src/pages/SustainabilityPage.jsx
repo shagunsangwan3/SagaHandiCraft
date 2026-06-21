@@ -11,17 +11,17 @@ const pillars = [
   {
     title: 'Slow Craft Over Fast Production',
     body: 'Our work is guided by artisans, not assembly lines.\n\nHandmade production naturally encourages a more considered way of working — slower, more intentional, and less wasteful than mass-manufactured furniture. Every cut, finish, joint, polish, and detail is handled with care, helping us create products with greater meaning and a longer life.\n\nWe believe in making fewer, better pieces.',
-    img: 'https://images.pexels.com/photos/8768609/pexels-photo-8768609.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
   },
   {
     title: 'Built to Last',
     body: 'For us, sustainability also means strength.\n\nA well-made cabinet, chair, bed, table, mirror, or décor piece should not be treated as disposable. It should age gracefully, carry memory, and remain useful and beautiful over time. This belief shapes our focus on solid materials, reliable craftsmanship, careful finishing, and designs that do not depend only on short-term trends.',
-    img: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=600',
   },
   {
     title: 'Packaging With Care',
     body: 'For international and B2B orders, packaging is an important part of responsibility. We aim to use protective, efficient, and practical packaging methods that help reduce damage, avoid unnecessary waste, and support safe movement of goods across long distances.\n\nOur approach is simple: protect the product, respect the material, and keep improving wherever possible.',
-    img: 'https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: 'https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=600',
   },
   {
     title: 'Supporting Handmade Livelihoods',

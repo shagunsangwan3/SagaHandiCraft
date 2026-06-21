@@ -6,7 +6,7 @@ export default function ReliableSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=900"
+          src="https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=900"
           alt="Global shipping"
           className="w-full h-full object-cover"
         />

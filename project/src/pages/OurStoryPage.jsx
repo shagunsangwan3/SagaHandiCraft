@@ -65,10 +65,10 @@ export default function OurStoryPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="h-36 rounded-xl overflow-hidden">
-                <img src="https://images.pexels.com/photos/8768609/pexels-photo-8768609.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Workshop" className="w-full h-full object-cover" />
+                <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Workshop" className="w-full h-full object-cover" />
               </div>
               <div className="h-36 rounded-xl overflow-hidden">
-                <img src="https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Furniture" className="w-full h-full object-cover" />
+                <img src="https://images.pexels.com/photos/6508357/pexels-photo-6508357.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Handcrafted Indian furniture" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function OurStoryPage() {
             </Link>
           </div>
           <div className="h-72 rounded-2xl overflow-hidden">
-            <img src="https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Global shipping" className="w-full h-full object-cover" />
+            <img src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Global export shipping cargo" className="w-full h-full object-cover" />
           </div>
         </div>
 

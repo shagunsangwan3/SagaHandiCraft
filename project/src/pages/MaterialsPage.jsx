@@ -200,8 +200,8 @@ export default function MaterialsPage() {
             </div>
             <div className="h-48 rounded-xl overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/8768609/pexels-photo-8768609.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Artisan working with wood"
+                src="https://images.pexels.com/photos/1125776/pexels-photo-1125776.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Sustainably sourced timber forest"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -26,7 +26,7 @@ export default function CareersPage() {
         badge="Join Our Team"
         title="Careers at SAGA"
         subtitle="Build with purpose. Grow with integrity. Craft for the world."
-        bg="https://images.pexels.com/photos/8768609/pexels-photo-8768609.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        bg="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600"
       />
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-14">
