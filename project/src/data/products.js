@@ -478,8 +478,6 @@ export const products = [
     leadTime: '7–9 weeks',
     moq: 1,
   },
-]
-
   {
     id: 'chesterfield-club-chair',
     name: 'Chesterfield Club Chair',
