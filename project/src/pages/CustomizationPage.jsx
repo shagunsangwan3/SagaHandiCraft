@@ -66,7 +66,7 @@ export default function CustomizationPage() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nCompany: ${form.company}\nMobile: ${form.mobile}\nProduct Type: ${productLine}\nQuantity: ${form.qty}\n\nRequirements:\n${form.description}${imgLine}`
     )
-    window.location.href = `mailto:info@sagahandicraft.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@sagahandicrafts.com?subject=${subject}&body=${body}`
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)

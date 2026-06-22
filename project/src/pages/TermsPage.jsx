@@ -68,7 +68,7 @@ These limitations of liability apply even if SAGA Handicrafts has been expressly
   },
   {
     title: 'Fidelity of Products',
-    body: `SAGA Handicrafts hereby disclaims the guarantee of exactness of the appearance or finish of the final product, as handcrafted items inherently have natural variations. In case you receive any damaged product, photographic evidence must be forwarded at info@sagahandicraft.com within 2 working days of receiving the product. The evidence will be reviewed by our representatives, and a valid damage will be confirmed for a replacement via email. In case of a damaged product, only the damaged part of the product will be replaced and no refund for the damaged product will be provided to the customer.`,
+    body: `SAGA Handicrafts hereby disclaims the guarantee of exactness of the appearance or finish of the final product, as handcrafted items inherently have natural variations. In case you receive any damaged product, photographic evidence must be forwarded at info@sagahandicrafts.com within 2 working days of receiving the product. The evidence will be reviewed by our representatives, and a valid damage will be confirmed for a replacement via email. In case of a damaged product, only the damaged part of the product will be replaced and no refund for the damaged product will be provided to the customer.`,
   },
   {
     title: 'Newsletter and Communication',
@@ -88,13 +88,13 @@ These limitations of liability apply even if SAGA Handicrafts has been expressly
   },
   {
     title: 'Report Abuse',
-    body: `As per terms, users can be held legally liable for every content or material posted on the website, legally accountable if the content or material is defamatory or protected by copyright and trademark. In case you come across any abuse or violation of the terms, please report to info@sagahandicraft.com.`,
+    body: `As per terms, users can be held legally liable for every content or material posted on the website, legally accountable if the content or material is defamatory or protected by copyright and trademark. In case you come across any abuse or violation of the terms, please report to info@sagahandicrafts.com.`,
   },
   {
     title: 'Law and Jurisdiction',
     body: `These terms and conditions will be governed by and construed in accordance with the laws of Jaipur, Rajasthan, India, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of Jaipur, Rajasthan, India.
 
-You can contact SAGA Handicrafts by email at info@sagahandicraft.com.`,
+You can contact SAGA Handicrafts by email at info@sagahandicrafts.com.`,
   },
 ]
 
@@ -111,7 +111,7 @@ export default function TermsPage() {
         <div className="bg-gold-100/40 border border-gold-200 rounded-xl p-4 mb-10">
           <p className="text-xs text-bark-300 leading-relaxed">
             If you require any more information or have any questions about our Terms of Use, please feel free to contact us by email at{' '}
-            <a href="mailto:info@sagahandicraft.com" className="text-gold-500 hover:underline">info@sagahandicraft.com</a>.
+            <a href="mailto:info@sagahandicrafts.com" className="text-gold-500 hover:underline">info@sagahandicrafts.com</a>.
           </p>
         </div>
 
@@ -131,8 +131,8 @@ export default function TermsPage() {
         <div className="mt-10 bg-cream-200/60 border border-cream-300 rounded-xl p-6 text-center">
           <p className="text-sm text-bark-300">Last updated: June 2026</p>
           <p className="text-xs text-bark-200 mt-1">SAGA Handicrafts, Jodhpur, Rajasthan, India</p>
-          <a href="mailto:info@sagahandicraft.com" className="text-gold-500 hover:text-gold-600 text-xs mt-2 inline-block transition-colors">
-            info@sagahandicraft.com
+          <a href="mailto:info@sagahandicrafts.com" className="text-gold-500 hover:text-gold-600 text-xs mt-2 inline-block transition-colors">
+            info@sagahandicrafts.com
           </a>
         </div>
       </div>

@@ -135,7 +135,7 @@ Sent from sagahandicraft.com
                   <Check size={26} className="text-gold-500" />
                 </div>
                 <p className="font-serif font-semibold text-bark-400 text-lg">Inquiry Sent!</p>
-                <p className="text-xs text-bark-200 text-center">Your inquiry has been delivered to <span className="text-gold-600 font-medium">info@sagahandicraft.com</span>. We'll respond within 48 hours.</p>
+                <p className="text-xs text-bark-200 text-center">Your inquiry has been delivered to <span className="text-gold-600 font-medium">info@sagahandicrafts.com</span>. We'll respond within 48 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="px-7 pt-5 pb-7 space-y-4">
