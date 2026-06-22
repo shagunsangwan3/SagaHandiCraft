@@ -1,8 +1,9 @@
 import { useState, useRef } from 'react'
-import { ArrowRight, Check, Ruler, Palette, Package, Phone, X, Mail, Upload } from 'lucide-react'
+import { ArrowRight, Check, Ruler, Palette, Package, Phone, X, Mail, Upload, Loader2, AlertCircle } from 'lucide-react'
 import PageHeader from '../components/PageHeader'
 import TrustBar from '../components/TrustBar'
 import Footer from '../components/Footer'
+import { sendEmail } from '../utils/sendEmail'
 
 const steps = [
   { icon: Phone, title: 'Consultation', desc: 'Share your vision, space requirements, and aesthetic preferences with our team.' },

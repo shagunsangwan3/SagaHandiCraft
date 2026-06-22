@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
-import { ArrowRight, Check, X, Mail, Upload, Phone } from 'lucide-react'
+import { ArrowRight, Check, X, Mail, Upload, Phone, Loader2, AlertCircle } from 'lucide-react'
+import { sendEmail } from '../utils/sendEmail'
 
 const benefits = [
   'Competitive Wholesale Pricing',
@@ -29,7 +30,8 @@ export default function B2BSection() {
   })
   const [images, setImages] = useState([])
   const [previews, setPreviews] = useState([])
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [errorMsg, setErrorMsg] = useState('')
   const fileRef = useRef(null)
 
   const handleImageChange = (e) => {
@@ -39,31 +41,57 @@ export default function B2BSection() {
   }
 
   const removeImage = (i) => {
-    const newImages = images.filter((_, idx) => idx !== i)
-    const newPreviews = previews.filter((_, idx) => idx !== i)
-    setImages(newImages)
-    setPreviews(newPreviews)
+    setImages(images.filter((_, idx) => idx !== i))
+    setPreviews(previews.filter((_, idx) => idx !== i))
   }
 
-  const handleSubmit = (e) => {
+  const resetForm = () => {
+    setForm({ name: '', company: '', email: '', mobile: '', productType: '', description: '', otherProduct: '' })
+    setImages([])
+    setPreviews([])
+    setStatus('idle')
+    setErrorMsg('')
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setStatus('sending')
+    setErrorMsg('')
+
     const productLine = form.productType === 'Other (please describe)' ? form.otherProduct : form.productType
-    const imgLine = images.length > 0
-      ? `\n\nImages to attach (${images.length}):\n${images.map((f) => f.name).join('\n')}\n(Please attach these images when you reply or resend this email)`
-      : ''
-    const subject = encodeURIComponent(`B2B Inquiry from ${form.company || form.name}`)
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nCompany: ${form.company}\nEmail: ${form.email}\nMobile: ${form.mobile}\n\nProduct Type: ${productLine}\n\nDescription / Requirements:\n${form.description}${imgLine}`
-    )
-    window.location.href = `mailto:info@sagahandicraft.com?subject=${subject}&body=${body}`
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setOpen(false)
-      setForm({ name: '', company: '', email: '', mobile: '', productType: '', description: '', otherProduct: '' })
-      setImages([])
-      setPreviews([])
-    }, 2500)
+
+    try {
+      await sendEmail({
+        subject: `B2B Inquiry from ${form.company || form.name}`,
+        name: form.name,
+        email: form.email,
+        message: `
+B2B INQUIRY — SAGA HANDICRAFTS
+================================
+Name:        ${form.name}
+Company:     ${form.company || '—'}
+Email:       ${form.email}
+Mobile:      ${form.mobile || '—'}
+
+Product Type: ${productLine}
+
+Description / Requirements:
+${form.description}
+
+${images.length > 0 ? `Reference Images: ${images.map(f => f.name).join(', ')} (${images.length} file${images.length > 1 ? 's' : ''} — customer will email separately)` : ''}
+================================
+Sent from sagahandicraft.com
+        `.trim(),
+      })
+      setStatus('success')
+      setTimeout(() => {
+        setOpen(false)
+        resetForm()
+      }, 3000)
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg(err.message || 'Something went wrong. Please try again.')
+    }
   }
 
   return (
@@ -96,21 +124,18 @@ export default function B2BSection() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-bark-400/60 backdrop-blur-sm animate-fade-in">
           <div className="bg-cream-100 rounded-2xl shadow-2xl w-full max-w-lg relative animate-slide-up max-h-[92vh] overflow-y-auto">
             <div className="sticky top-0 bg-cream-100 px-7 pt-7 pb-4 border-b border-cream-200 z-10">
-              <button onClick={() => setOpen(false)} className="absolute top-5 right-5 text-bark-200 hover:text-bark-400"><X size={18} /></button>
+              <button onClick={() => { setOpen(false); resetForm() }} className="absolute top-5 right-5 text-bark-200 hover:text-bark-400"><X size={18} /></button>
               <h3 className="font-serif font-bold text-xl text-bark-400">B2B Inquiry</h3>
               <p className="text-xs text-bark-200 mt-0.5">Tell us what you need. We'll get back within 48 hours.</p>
             </div>
 
-            {submitted ? (
+            {status === 'success' ? (
               <div className="flex flex-col items-center gap-3 py-12 px-7">
-                <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center">
-                  <Check size={22} className="text-gold-500" />
+                <div className="w-14 h-14 rounded-full bg-gold-100 flex items-center justify-center">
+                  <Check size={26} className="text-gold-500" />
                 </div>
-                <p className="font-serif font-semibold text-bark-400">Opening your email client...</p>
-                <p className="text-xs text-bark-200 text-center">Your inquiry details are pre-filled.</p>
-                {images.length > 0 && (
-                  <p className="text-xs text-gold-600 text-center">Remember to attach your {images.length} image{images.length > 1 ? 's' : ''} to the email.</p>
-                )}
+                <p className="font-serif font-semibold text-bark-400 text-lg">Inquiry Sent!</p>
+                <p className="text-xs text-bark-200 text-center">Your inquiry has been delivered to <span className="text-gold-600 font-medium">info@sagahandicraft.com</span>. We'll respond within 48 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="px-7 pt-5 pb-7 space-y-4">
@@ -182,8 +207,7 @@ export default function B2BSection() {
                     <p className="text-xs text-bark-300">Click to upload images</p>
                     <p className="text-[10px] text-bark-200">JPG, PNG, WEBP · Max 5 images</p>
                   </button>
-                  <input ref={fileRef} type="file" multiple accept="image/*" className="hidden"
-                    onChange={handleImageChange} />
+                  <input ref={fileRef} type="file" multiple accept="image/*" className="hidden" onChange={handleImageChange} />
                   {previews.length > 0 && (
                     <div className="flex gap-2 mt-2 flex-wrap">
                       {previews.map((src, i) => (
@@ -205,13 +229,25 @@ export default function B2BSection() {
                   )}
                   {images.length > 0 && (
                     <p className="text-[10px] text-bark-200 mt-1.5">
-                      {images.length} image{images.length > 1 ? 's' : ''} selected — attach them manually to the email that opens.
+                      {images.length} image{images.length > 1 ? 's' : ''} selected — mention them in your description, we'll request them separately.
                     </p>
                   )}
                 </div>
 
-                <button type="submit" className="btn-gold w-full text-white text-sm font-medium py-3 rounded-lg flex items-center justify-center gap-2">
-                  <Mail size={14} /> Send Inquiry
+                {status === 'error' && (
+                  <div className="flex items-center gap-2 bg-red-50 border border-red-200 rounded-lg px-3 py-2.5">
+                    <AlertCircle size={14} className="text-red-500 flex-shrink-0" />
+                    <p className="text-xs text-red-600">{errorMsg}</p>
+                  </div>
+                )}
+
+                <button type="submit" disabled={status === 'sending'}
+                  className="btn-gold w-full text-white text-sm font-medium py-3 rounded-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                  {status === 'sending' ? (
+                    <><Loader2 size={14} className="animate-spin" /> Sending...</>
+                  ) : (
+                    <><Mail size={14} /> Send Inquiry</>
+                  )}
                 </button>
               </form>
             )}
